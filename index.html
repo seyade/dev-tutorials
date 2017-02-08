@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <title>textboxe Repl.</title>
   <style>
-  .hide {
+  .is-hidden {
     display: none;
   }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <form action="">
-      <h1>My Title</h1>
-      <input id="edited-title" type="text" value="" placeholder="type your new title" />
-      <button id="save-btn">Save</button>
+    <form id="edit-title-form">
+      <h1 class="main-title">My Title</h1>
+      <input class="edited-title" type="text" placeholder="type your new title" />
+      <button class="save-btn">Save</button>
     </form>
   </div>
   <script>
   (function () {
-    var saveBtn = document.getElementById('save-btn');
+    var saveBtn = document.querySelector('.save-btn');
 
     saveBtn.addEventListener('click', function (e) {
-      var newTitle = document.getElementById('edited-title').value;
+      var initialTitle = document.querySelector('.main-title'),
+        newTitle = document.querySelector('.edited-title').value;
 
       console.log('new title: ', newTitle);
 
