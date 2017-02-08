@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>textboxe Repl.</title>
+  <style>
+  .hide {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="">
+      <h1>My Title</h1>
+      <input id="edited-title" type="text" value="" placeholder="type your new title" />
+      <button id="save-btn">Save</button>
+    </form>
+  </div>
+  <script>
+  (function () {
+    var saveBtn = document.getElementById('save-btn');
+
+    saveBtn.addEventListener('click', function (e) {
+      var newTitle = document.getElementById('edited-title').value;
+
+      console.log('new title: ', newTitle);
+
+      e.preventDefault();
+    }, false);
+  }());
+  </script>
+</body>
+</html>
