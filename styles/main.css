@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 80px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.main-title-panel {
+  font-family: 'Roboto Thin', sans-serif;
+  posittion: relative;
+  padding: 20px;
+}
+.main-title,
+.edit-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+.is-hidden {
+  display: none;
+}
+.edit-open-panel-btn,
+.save-btn {
+  border: 0;
+}
+
+.edit-open-panel-btn {
+  font-size: 0.5em;
+  text-decoration: underline;
+  background: none;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #07669d;
+  color: #fff;
+  padding: 7px 20px;
+  text-align: center;
+}
+
+.edit-panel-new-title {
+  padding: 5px 10px;
+  width: 200px;
+}

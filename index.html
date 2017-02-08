@@ -2,34 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>textboxe Repl.</title>
-  <style>
-  .is-hidden {
-    display: none;
-  }
-  </style>
+  <title>Textbox Replacement</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
   <div class="wrapper">
-    <form id="edit-title-form">
-      <h1 class="main-title">My Title</h1>
-      <input class="edited-title" type="text" placeholder="type your new title" />
-      <button class="save-btn">Save</button>
-    </form>
+    <article class="main">
+
+      <header>
+        <div class="main-title-panel">
+          <h1 class="main-title"><span class="title-text">My Title</span> <button class="edit-open-panel-btn">edit</button></h1>
+
+          <div class="edit-panel is-hidden">
+            <form id="edit-panel-title-form">
+              <input class="edit-panel-new-title" type="text" placeholder="type your new title">
+              <button class="save-btn">Save</button>
+            </form>
+          </div>
+        </div>
+        <!-- end .main-title-panel -->
+      </header>
+
+      <section class="content">
+        <h2>Any Title Here</h2>
+        <p>Any Content Here</p>
+      </section>
+      <!-- end .content -->
+
+    </article>
+    <!-- end .main -->
+
   </div>
-  <script>
-  (function () {
-    var saveBtn = document.querySelector('.save-btn');
+  <!-- end .wrapper -->
 
-    saveBtn.addEventListener('click', function (e) {
-      var initialTitle = document.querySelector('.main-title'),
-        newTitle = document.querySelector('.edited-title').value;
-
-      console.log('new title: ', newTitle);
-
-      e.preventDefault();
-    }, false);
-  }());
-  </script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
