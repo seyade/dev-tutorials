@@ -1,2 +1,2 @@
 # dev-tutorials
-To help our personal development in JavaScript coding
+To help each other in our personal development in JavaScript coding
